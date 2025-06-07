@@ -1,0 +1,16 @@
+/hello-dyn-cpp/libcalculator.dylib
+/hello-dyn-csharp/bin/
+/hello-dyn-csharp/obj/
+/hello-dyn-dart/.dart_tool/
+/hello-dyn-dart/bin/
+/hello-dyn-go/hello-dyn-go
+.gradle
+.kotlin
+build
+target
+Cargo.lock
+*.class
+*.lock
+.idea
+*.pyc
+*.pyc

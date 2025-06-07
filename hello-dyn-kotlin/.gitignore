@@ -1,0 +1,17 @@
+# Gradle builds
+build/
+.gradle/
+.kotlin/
+
+# Gradle wrapper (explicitly excluded - this project uses system Gradle only)
+gradle/
+gradlew
+gradlew.bat
+
+# IDE files
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db

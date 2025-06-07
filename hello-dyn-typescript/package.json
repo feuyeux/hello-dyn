@@ -1,0 +1,28 @@
+{
+  "name": "hello-dyn-typescript",
+  "version": "1.0.0",
+  "description": "TypeScript 动态加载四则运算器",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "dev": "ts-node src/main.ts",
+    "clean": "rimraf dist"
+  },
+  "keywords": [
+    "calculator",
+    "dynamic",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.2",
+    "ts-node": "^10.9.0",
+    "rimraf": "^6.0.0"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
