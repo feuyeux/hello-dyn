@@ -1,19 +1,19 @@
 #!/bin/bash
 
-# Rust 动态加载四则运算器构建脚本
+# Rust 动态加载四则运算器构建和运行脚本
 
-echo "=== 构建 Rust 计算器库 ==="
+set -e
 
-# 构建动态库
+cd "$(dirname "$0")"
+
+echo "=== 构建 Rust 计算器库和应用 ==="
+
+# 构建整个工作空间
+echo "构建工作空间..."
 cargo build
 
-if [ $? -eq 0 ]; then
-    echo "库构建成功!"
-
-    echo ""
-    echo "=== 运行动态加载计算器 ==="
-    cargo run
-else
-    echo "构建失败!"
-    exit 1
-fi
+echo "库和应用构建成功!"
+echo ""
+echo "=== 运行动态加载计算器 ==="
+cd app
+cargo run

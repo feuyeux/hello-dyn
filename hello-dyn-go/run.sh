@@ -1,21 +1,24 @@
 #!/bin/bash
 
-# Go 动态加载四则运算器构建脚本
+# Go 动态加载四则运算器构建和运行脚本
 
-echo "=== 构建 Go 计算器 ==="
+set -e
 
-# 初始化模块（如果需要）
+cd "$(dirname "$0")"
+
+echo "=== 构建和运行 Go 计算器应用 ==="
+
+# 下载和整理依赖
+echo "整理依赖..."
+go work sync
+
+# 在 app 目录中构建应用
+echo "构建应用..."
+cd app
 go mod tidy
-
-# 构建项目
 go build -o calculator .
 
-if [ $? -eq 0 ]; then
-    echo "构建成功!"
-    echo ""
-    echo "=== 运行动态加载计算器 ==="
-    ./calculator
-else
-    echo "构建失败!"
-    exit 1
-fi
+echo "应用构建成功!"
+echo ""
+echo "=== 运行动态加载计算器 ==="
+./calculator

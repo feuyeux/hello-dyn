@@ -1,38 +1,13 @@
-// This project uses system Gradle only - no gradle wrapper (gradlew) is used
+// Root project build file
 plugins {
-    kotlin("jvm") version "2.0.21"
-    application
+    kotlin("jvm") version "2.0.21" apply false
 }
 
-group = "com.example"
+group = "com.hello-dyn"
 version = "1.0.0"
 
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    implementation(kotlin("stdlib"))
-    implementation(kotlin("reflect"))
-    testImplementation(kotlin("test"))
-}
-
-kotlin {
-    jvmToolchain(21)
-}
-
-application {
-    mainClass.set("MainKt")
-}
-
-tasks.test {
-    useJUnitPlatform()
-}
-
-tasks.jar {
-    manifest {
-        attributes["Main-Class"] = "MainKt"
+allprojects {
+    repositories {
+        mavenCentral()
     }
-    from(configurations.runtimeClasspath.get().map { if (it.isDirectory) it else zipTree(it) })
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }

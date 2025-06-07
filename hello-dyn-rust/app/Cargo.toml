@@ -1,0 +1,11 @@
+[package]
+name = "hello-dyn-calculator-app"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.82"
+description = "A Rust calculator application with dynamic loading"
+license = "MIT"
+
+[dependencies]
+hello-dyn-calculator-lib = { path = "../lib" }
+libloading = "0.8"

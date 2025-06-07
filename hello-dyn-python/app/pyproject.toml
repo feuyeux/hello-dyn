@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hello-dyn-calculator-app"
+version = "1.0.0"
+description = "Python calculator application with dynamic loading"
+authors = [{name = "Hello Dyn Team"}]
+license = {text = "MIT"}
+requires-python = ">=3.8"
+dependencies = [
+    "hello-dyn-calculator-lib"
+]
+dynamic = ["readme"]
+
+[project.scripts]
+calculator = "calculator_app.main:main"
+
+[tool.setuptools]
+packages = ["calculator_app"]
+
+[tool.setuptools.dynamic]
+readme = {file = ["README.md"]}

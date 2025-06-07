@@ -1,0 +1,13 @@
+name: calculator_app
+description: Calculator Application for Dart
+version: 1.0.0
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+
+dependencies:
+  calculator_lib:
+    path: ../calculator_lib
+
+dev_dependencies:
+  lints: ^4.0.0

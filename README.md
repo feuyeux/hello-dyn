@@ -7,18 +7,6 @@ This project demonstrates how to implement a dynamic loading mechanism for a fou
 3. **Dynamic Loading** - Loads the calculator implementation at runtime
 4. **Function Invocation** - Calls the dynamically loaded calculator functions through a unified interface
 
-## Supported Languages
-
-- **Java** - Uses URLClassLoader for dynamic class loading
-- **Python** - Uses importlib for dynamic module import
-- **Rust** - Uses libloading for dynamic library loading
-- **C++** - Uses dlopen/LoadLibrary for dynamic library loading
-- **C#** - Uses Reflection and Assembly.LoadFrom for dynamic assembly loading
-- **Go** - Uses reflection and interfaces for dynamic type creation
-- **Swift** - Uses protocols and type system for dynamic instance creation
-- **TypeScript** - Uses dynamic import and factory pattern for module loading
-- **Dart** - Uses factory pattern and reflection for dynamic instance creation
-- **Kotlin** - Uses reflection and factory pattern for dynamic class loading
 
 ## Project Structure
 
@@ -37,85 +25,6 @@ hello-dyn/
 └── hello-dyn-kotlin/      # Kotlin implementation
 ```
 
-## Quick Start
-
-Each language implementation includes a `run.sh` script for quick build and execution:
-
-### Java
-```bash
-cd hello-dyn-java
-chmod +x run.sh
-./run.sh
-```
-
-### Python
-```bash
-cd hello-dyn-python
-chmod +x run.sh
-./run.sh
-```
-
-### Rust
-```bash
-cd hello-dyn-rust
-chmod +x run.sh
-./run.sh
-```
-
-### C++
-```bash
-cd hello-dyn-cpp
-chmod +x run.sh
-./run.sh
-```
-
-### C#
-```bash
-cd hello-dyn-csharp
-chmod +x run.sh
-./run.sh
-```
-
-### Go
-```bash
-cd hello-dyn-go
-chmod +x run.sh
-./run.sh
-```
-
-### Swift
-```bash
-cd hello-dyn-swift
-chmod +x run.sh
-./run.sh
-```
-
-### TypeScript
-```bash
-cd hello-dyn-typescript
-chmod +x run.sh
-./run.sh
-```
-
-### Dart
-```bash
-cd hello-dyn-dart
-chmod +x run.sh
-./run.sh
-```
-
-### Kotlin
-```bash
-cd hello-dyn-kotlin
-chmod +x run.sh
-./run.sh
-```
-
-## Features
-
-### Calculator Types
-- **Basic Calculator** - Provides basic arithmetic operations
-- **Advanced Calculator** - Extends the basic calculator with logging and additional math functions
 
 ### Dynamic Loading Mechanism
 
@@ -146,14 +55,16 @@ Each language implements a different dynamic loading strategy:
 
 ## Requirements
 
-- **Java**: JDK 8+
-- **Python**: Python 3.6+
+- **Java**: JDK 21+
+- **Python**: Python 3.8+
 - **Rust**: Rust 1.60+
-- **C++**: C++11+ compiler (GCC/Clang)
+- **C++**: C++11+ compiler (GCC/Clang) and CMake 3.10+
 - **C#**: .NET 6+
 - **Go**: Go 1.19+
 - **Swift**: Swift 5.0+
 - **TypeScript**: Node.js 16+ and npm
+- **Dart**: Dart 3.0+
+- **Kotlin**: Kotlin 1.8+ and Gradle 7.0+
 
 ## Usage
 
@@ -180,11 +91,3 @@ Each language implements a dynamic loader responsible for:
 - Loading calculator implementations at runtime
 - Creating calculator instances
 - Providing a unified invocation interface
-
-## Contribution
-
-Contributions are welcome! Please submit issues and pull requests to help improve this project.
-
-## License
-
-MIT License
